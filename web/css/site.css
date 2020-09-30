@@ -1,0 +1,298 @@
+@keyframes focusText {
+    0%{
+        filter: blur(10px);
+    }
+    100%{
+        filter: blur(0px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes correctAnswer {
+    0% {
+      background-color: rgb(255, 255, 255);
+    }
+    50% {
+        background-color: rgb(178, 255, 159);
+    }
+    100% {
+        background-color: rgb(220, 255, 211);
+    }
+}
+
+@keyframes wrongAnswer {
+    0% {
+      background-color: rgb(255, 255, 255);
+    }
+    50% {
+        background-color: rgb(255, 154, 154);
+    }
+    100% {
+        background-color: rgb(255, 200, 200);
+    }
+}
+
+@keyframes newDivPop {
+    0% {
+        width: 0%;
+        height: 0%;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+.navbar-nav > li > a {
+    line-height: 27px!important;
+}
+
+.navbar-brand {
+    line-height: 27px!important;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+.indexText {
+    font-size: 46px!important;
+}
+.tests{
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.testDiv {
+    background-color: #fafafa;
+    margin: 10px;
+}
+.testPadding{
+    padding: 20px;
+}
+.testButton {
+    width: 100%;
+}
+.testNavDiv {
+    text-align: center;
+}
+.testNavButton {
+    width: 100%;
+}
+#questionid {
+    font-size: 0px;
+}
+.guestDiv {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vh;
+    text-align: center;
+    animation: focusText 0.65s ease-out forwards;
+}
+.guestIcon {
+    font-size: 72px;
+    opacity: 0.7;
+}
+.guestWarn {
+    margin: 20px 20px;
+    line-height: 1.5em;
+}
+.adminTestDiv {
+    background-color: rgba(0,0,0,0.01);
+    animation: fadeIn 1.5s ease-in-out;
+}
+.adminTestDiv h4 {
+    line-height: 3em;
+}
+.adminTestDiv small {
+    margin: 0 10px;
+    line-height: 3em;
+}
+.adminTestDiv h4 {
+    float: left;
+    margin: 0 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.adminControlButton {
+    line-height: 3em;
+    width: 3em;
+}
+.adminTestButton {
+    float: right;
+}
+.adminAddMain {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0px auto;
+}
+.adminAddQuestions {
+    position: relative;
+    float: right;
+    width: 45%;
+    margin: 0px 10px;
+}
+.adminAnswer
+{
+    white-space: nowrap;
+    margin: 0;
+
+}
+.adminAnswer > div
+{
+    width: 80%!important;
+    margin: 0;
+    display: inline-block;
+}
+.adminAnswer > button
+{
+    width: 20%!important;
+    margin-top: 31px;
+}
+.questionDiv {
+    background-color: #f8f7f7;
+    margin: 40px auto;
+    padding: 5px 10px;
+    animation: newDivPop 0.4s ease-in-out forwards;
+}
+.answerDiv {
+    background-color: #f8f7f7;
+    margin: 10px auto;
+    padding: 5px 10px;
+}
+.testResults
+{
+    margin: 100px auto;
+    text-align: center;
+}
+.testResults > a
+{
+    margin: 50px auto;
+}
